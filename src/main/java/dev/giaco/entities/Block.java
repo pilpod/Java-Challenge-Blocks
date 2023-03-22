@@ -1,6 +1,8 @@
 package dev.giaco.entities;
 
-public class Block {
+import dev.giaco.contracts.InterfaceBlock;
+
+public class Block implements InterfaceBlock<Block> {
 
     private int id;
     private String orientation;
