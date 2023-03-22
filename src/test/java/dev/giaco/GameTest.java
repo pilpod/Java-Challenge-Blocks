@@ -17,7 +17,7 @@ public class GameTest {
     }
 
     @Test
-    public void testGameReceiveInputTypeString() {
+    public void testGameCanSetInputTypeString() {
         game.setInput("0 h 2 3 5 1 v 3 1 1");
         assertThat(game.getInput(), equalTo("0 h 2 3 5 1 v 3 1 1"));
     }
