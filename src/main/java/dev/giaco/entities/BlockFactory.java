@@ -6,7 +6,5 @@ public class BlockFactory extends AbstractFactory {
     public AbstractBlock createBlock(int id, String orientation, int posX, int posY, int bockLength) {
         return super.createBlock(id, orientation, posX, posY, bockLength);
     }
-    
-    
 
 }
