@@ -62,7 +62,7 @@ public class GameTest {
     @Test
     public void testGameBlocksOverlaps() {
         game.setInput("0 h 2 3 5 1 v 4 1 5");
-        Boolean areOverlaps = game.check();
+        Boolean areOverlaps = game.overlaps();
         assertThat(areOverlaps, is(true));
     }
 

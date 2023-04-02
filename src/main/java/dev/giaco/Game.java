@@ -27,7 +27,7 @@ public class Game {
         this.input = input;
     }
 
-    public Boolean check() {
+    public Boolean overlaps() {
         return null;
     }
 
