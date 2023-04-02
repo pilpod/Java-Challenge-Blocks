@@ -32,7 +32,7 @@ public class Game {
     }
 
     public Collection<AbstractBlock> retrieveBlocksWithData() {
-        
+
         String[] datas = input.split(" ");
         int attributesPerBlock = 5;
         int blocksQuantity = datas.length / attributesPerBlock;
@@ -43,12 +43,12 @@ public class Game {
 
         Collection<AbstractBlock> blocks = new ArrayList<AbstractBlock>();
 
-        AttributeHandler handler = new AttributeHandler(dataBlock1);
-
         for (int i = 0; i < blocksQuantity; i++) {
-                blocks.add(factory.createBlock(handler.getId(), handler.getOrientation(), handler.getPosX(), handler.getPosY(), handler.getLength()));
+            String[] data = (i < 1) ? dataBlock1 : dataBlock2 ;
+            AttributeHandler handler = new AttributeHandler(data);
+            blocks.add(factory.createBlock(handler.getId(), handler.getOrientation(), handler.getPosX(),
+                    handler.getPosY(), handler.getLength()));
         }
-        
 
         return blocks;
     }

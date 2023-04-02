@@ -49,7 +49,14 @@ public class GameTest {
         assertThat(blocksData.size(), equalTo(2));
         assertThat(blocks.get(0).getId(), equalTo(0));
         assertThat(blocks.get(0).getOrientation(), equalTo("h"));
+        assertThat(blocks.get(0).getPositionX(), equalTo(2));
+        assertThat(blocks.get(0).getPositionY(), equalTo(3));
+        assertThat(blocks.get(0).getBlockLength(), equalTo(5));
+        assertThat(blocks.get(1).getId(), equalTo(1));
         assertThat(blocks.get(1).getOrientation(), equalTo("v"));
+        assertThat(blocks.get(1).getPositionX(), equalTo(4));
+        assertThat(blocks.get(1).getPositionY(), equalTo(1));
+        assertThat(blocks.get(1).getBlockLength(), equalTo(5));
     }
 
     @Test
