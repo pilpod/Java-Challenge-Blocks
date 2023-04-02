@@ -30,26 +30,26 @@ public class BlockTest {
 
     @Test
     public void testSetOtherPositionMethodBlockOrientacionH() {
-        List<Integer> pos = block.getOtherPos();
+        List<String> pos = block.getOtherPos();
 
         assertThat(pos.size(), equalTo(5));
-        assertThat(pos.get(0), equalTo(3));
-        assertThat(pos.get(1), equalTo(4));
-        assertThat(pos.get(2), equalTo(5));
-        assertThat(pos.get(3), equalTo(6));
-        assertThat(pos.get(4), equalTo(7));
+        assertThat(pos.get(0), equalTo("2,3"));
+        assertThat(pos.get(1), equalTo("2,4"));
+        assertThat(pos.get(2), equalTo("2,5"));
+        assertThat(pos.get(3), equalTo("2,6"));
+        assertThat(pos.get(4), equalTo("2,7"));
     }
 
     @Test
     public void testSetOtherPositionMethodBlockOrientacionV() {
-        List<Integer> pos = block2.getOtherPos();
+        List<String> pos = block2.getOtherPos();
 
         assertThat(pos.size(), equalTo(5));
-        assertThat(pos.get(0), equalTo(2));
-        assertThat(pos.get(1), equalTo(3));
-        assertThat(pos.get(2), equalTo(4));
-        assertThat(pos.get(3), equalTo(5));
-        assertThat(pos.get(4), equalTo(6));
+        assertThat(pos.get(0), equalTo("2,3"));
+        assertThat(pos.get(1), equalTo("3,3"));
+        assertThat(pos.get(2), equalTo("4,3"));
+        assertThat(pos.get(3), equalTo("5,3"));
+        assertThat(pos.get(4), equalTo("6,3"));
     }
 
     
