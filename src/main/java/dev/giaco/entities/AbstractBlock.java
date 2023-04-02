@@ -1,5 +1,8 @@
 package dev.giaco.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class AbstractBlock {
     
     private int id;
@@ -8,6 +11,7 @@ public abstract class AbstractBlock {
     private int positionY;
     private int blockLength;
     private int blockWidth = 1;
+    private List<Integer> otherPos = new ArrayList<>();
 
     public AbstractBlock(int id, String orientation, int positionX, int positionY, int blockLength) {
         this.id = id;
@@ -15,6 +19,8 @@ public abstract class AbstractBlock {
         this.positionX = positionX;
         this.positionY = positionY;
         this.blockLength = blockLength;
+
+        setOtherPos();
     }
 
     public int getId() {
@@ -60,5 +66,25 @@ public abstract class AbstractBlock {
     public int getBlockWidth() {
         return blockWidth;
     }
+
+    public List<Integer> getOtherPos() {
+        return otherPos;
+    }
+
+    public void setOtherPos() {
+        if (getOrientation() == "h") {
+            for (int i = 0; i < getBlockLength(); i++) {
+                otherPos.add(getPositionY() + i);
+            }
+        }
+
+        if (getOrientation() == "v") {
+            for (int i = 0; i < getBlockLength(); i++) {
+                otherPos.add(getPositionX() + i);
+            }
+        }
+    }
+
+
 
 }

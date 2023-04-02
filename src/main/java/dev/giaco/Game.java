@@ -3,9 +3,12 @@ package dev.giaco;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.stream.Stream;
+
 import dev.giaco.entities.AbstractBlock;
 import dev.giaco.entities.AbstractFactory;
 import dev.giaco.entities.AttributeHandler;
+import dev.giaco.entities.Block;
 
 public class Game {
 
@@ -28,6 +31,23 @@ public class Game {
     }
 
     public Boolean overlaps() {
+        
+        /* 
+         * recuperar coleccion de bloques
+         * obtener todas las casillas ocupadas por el bloque
+         * * si el bloque tiene orientacion horizontal se va sumando el eje x hasta ocupar el largo total
+         * * si el bloque tiene orientacion vertical se va sumando el eje y hasta ocupar el largo total
+         * recorrer las listas obtenidas y comparar los vectores
+         */
+
+
+        Collection<AbstractBlock> blocks = retrieveBlocksWithData();
+
+        blocks.forEach((block) -> { 
+            
+        });
+        
+
         return null;
     }
 
