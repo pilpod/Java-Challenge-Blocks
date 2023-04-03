@@ -72,13 +72,13 @@ public abstract class AbstractBlock {
     }
 
     public void setOtherPos() {
-        if (getOrientation() == "h") {
+        if (getOrientation().hashCode() == "h".hashCode()) {
             for (int i = 0; i < getBlockLength(); i++) {
                 otherPos.add(getPositionX() +","+ (getPositionY() + i));
             }
         }
 
-        if (getOrientation() == "v") {
+        if (getOrientation().hashCode() == "v".hashCode()) {
             for (int i = 0; i < getBlockLength(); i++) {
                 otherPos.add((getPositionX() + i)+","+getPositionY());
             }

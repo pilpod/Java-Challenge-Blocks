@@ -3,12 +3,11 @@ package dev.giaco;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.stream.Stream;
+import java.util.List;
 
 import dev.giaco.entities.AbstractBlock;
 import dev.giaco.entities.AbstractFactory;
 import dev.giaco.entities.AttributeHandler;
-import dev.giaco.entities.Block;
 
 public class Game {
 
@@ -40,15 +39,13 @@ public class Game {
          * recorrer las listas obtenidas y comparar los vectores
          */
 
-
         Collection<AbstractBlock> blocks = retrieveBlocksWithData();
 
-        blocks.forEach((block) -> { 
-            
+        blocks.forEach((block) -> {
+            System.out.println(block.getOtherPos());
         });
-        
 
-        return null;
+        return false;
     }
 
     public Collection<AbstractBlock> retrieveBlocksWithData() {
