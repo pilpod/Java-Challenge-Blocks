@@ -60,10 +60,80 @@ public class GameTest {
     }
 
     @Test
-    public void testGameBlocksOverlaps() {
+    public void testGameBlocksOverlapsCase0() {
         game.setInput("0 h 2 3 5 1 v 4 1 5");
         Boolean areOverlaps = game.overlaps();
         assertThat(areOverlaps, is(true));
+    }
+
+    @Test
+    public void testGameBlocksOverlapsCase1() {
+        game.setInput("0 h 2 3 5 1 v 3 1 1");
+        Boolean areOverlaps = game.overlaps();
+        assertThat(areOverlaps, is(false));
+    }
+
+    @Test
+    public void testGameBlocksOverlapsCase2() {
+        game.setInput("0 h 2 3 1 1 h 2 3 1");
+        Boolean areOverlaps = game.overlaps();
+        assertThat(areOverlaps, is(true));
+    }
+
+    @Test
+    public void testGameBlocksOverlapsCase3() {
+        game.setInput("0 h 2 3 5 1 h 3 3 2");
+        Boolean areOverlaps = game.overlaps();
+        assertThat(areOverlaps, is(true));
+    }
+
+    @Test
+    public void testGameBlocksOverlapsCase4() {
+        game.setInput("0 h 2 3 5 1 h 4 1 2");
+        Boolean areOverlaps = game.overlaps();
+        assertThat(areOverlaps, is(false));
+    }
+
+    @Test
+    public void testGameBlocksOverlapsCase5() {
+        game.setInput("0 h 2 3 5 1 v 3 1 3");
+        Boolean areOverlaps = game.overlaps();
+        assertThat(areOverlaps, is(true));
+    }
+
+    @Test
+    public void testGameBlocksOverlapsCase6() {
+        game.setInput("0 h 8 7 2 1 v 10 7 6");
+        Boolean areOverlaps = game.overlaps();
+        assertThat(areOverlaps, is(false));
+    }
+
+    @Test
+    public void testGameBlocksOverlapsCase7() {
+        game.setInput("0 h 2 3 5 1 v 3 1 2");
+        Boolean areOverlaps = game.overlaps();
+        assertThat(areOverlaps, is(false));
+    }
+
+    @Test
+    public void testGameBlocksOverlapsCase8() {
+        game.setInput("0 h 4 3 3 2 v 6 2 2");
+        Boolean areOverlaps = game.overlaps();
+        assertThat(areOverlaps, is(true));
+    }
+
+    @Test
+    public void testGameBlocksOverlapsCase9() {
+        game.setInput("0 v 3 3 2 1 v 3 5 2");
+        Boolean areOverlaps = game.overlaps();
+        assertThat(areOverlaps, is(false));
+    }
+
+    @Test
+    public void testGameBlocksOverlapsCase10() {
+        game.setInput("0 h 1 3 2 1 h 5 3 2");
+        Boolean areOverlaps = game.overlaps();
+        assertThat(areOverlaps, is(false));
     }
 
 }
