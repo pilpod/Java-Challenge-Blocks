@@ -34,10 +34,10 @@ public class BlockTest {
 
         assertThat(pos.size(), equalTo(5));
         assertThat(pos.get(0), equalTo("2,3"));
-        assertThat(pos.get(1), equalTo("2,4"));
-        assertThat(pos.get(2), equalTo("2,5"));
-        assertThat(pos.get(3), equalTo("2,6"));
-        assertThat(pos.get(4), equalTo("2,7"));
+        assertThat(pos.get(1), equalTo("3,3"));
+        assertThat(pos.get(2), equalTo("4,3"));
+        assertThat(pos.get(3), equalTo("5,3"));
+        assertThat(pos.get(4), equalTo("6,3"));
     }
 
     @Test
@@ -46,10 +46,10 @@ public class BlockTest {
 
         assertThat(pos.size(), equalTo(5));
         assertThat(pos.get(0), equalTo("2,3"));
-        assertThat(pos.get(1), equalTo("3,3"));
-        assertThat(pos.get(2), equalTo("4,3"));
-        assertThat(pos.get(3), equalTo("5,3"));
-        assertThat(pos.get(4), equalTo("6,3"));
+        assertThat(pos.get(1), equalTo("2,4"));
+        assertThat(pos.get(2), equalTo("2,5"));
+        assertThat(pos.get(3), equalTo("2,6"));
+        assertThat(pos.get(4), equalTo("2,7"));
     }
 
     
